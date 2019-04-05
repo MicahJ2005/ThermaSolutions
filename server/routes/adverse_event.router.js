@@ -8,7 +8,6 @@ const router = express.Router();
 // first remove all entries for patient_id and then insert
 // entries from those selected and with clavien scores
 router.post('/',rejectUnauthenticated, async (req, res) => {
-
   const newAdverseEvent = req.body;
   // setup arrays of values for bulk insert
   const queryValues = [
